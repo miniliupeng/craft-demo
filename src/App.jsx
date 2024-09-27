@@ -44,9 +44,9 @@ import lz from "lzutf8";
       useNode 钩子接受一个收集器函数，可以用来检索与相应节点相关的状态信息。
  *
  * 11、useEditor：获取当前选择的组件，获取编辑器内部状态
- * 
-  
-
+ * 12、query 
+   query.serialize()  获取序列化json
+   将json传入 Frame 来回显
  */
 
 export default function App() {
@@ -72,7 +72,7 @@ export default function App() {
         <Topbar />
         <Grid container spacing={3}>
           <Grid item xs>
-            <Frame data={json} >
+            <Frame json={json} >
               {/* <Container padding={5} background="#eee"> */}
               <Element is={Container} padding={5} background="#eee" canvas>
                 {/* 类型为容器的 Canvas 节点，可放置。 */}
